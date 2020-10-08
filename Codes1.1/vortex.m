@@ -43,7 +43,7 @@ function [norms] = vortex(n,reflevel)
     rhoEX = QEX(:,:,1); rhouEX = QEX(:,:,2); rhovEX = QEX(:,:,3); EnerEX = QEX(:,:,4);
     norms = zeros(4,1);
     for i = 1:4,
-        norms(i) = L2norm(Q(:,:,i)-QEX(:,:,i));
+        norms(i) = L2norm(Q(:,:,i)-QEX(:,:,i))/L2norm(QEX(:,:,i));
     end
 end
 
