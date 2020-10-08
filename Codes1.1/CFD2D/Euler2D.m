@@ -42,7 +42,7 @@ while (time<FinalTime)
   end;
   
   % Increment time and compute new timestep
-  time = time+dt
+  time = time+dt;
   dt = EulerDT2D(Q, gamma);
 
   tstep = tstep+1;
